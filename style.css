@@ -1,0 +1,340 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #031540;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+/* Home Section Styles */
+.home {
+    height: 100vh;
+    background: linear-gradient(-90deg, #031540 65%, #fff 35%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background: #031540;
+    border-radius: 50%;
+    border: 25px solid #fff;
+    outline: 25px solid #031540;
+}
+
+.home-image.circular img {
+    border-radius: 50%; /* Keep circular shape only for this element */
+}
+
+.home-image img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    top: -50px;
+    right: 2px;
+    max-width: 300px;
+}
+
+.home-content {
+    max-width: 600px;
+    color: #fff;
+    text-align: right;
+}
+
+.home-content h1 {
+    font-size: 55px;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 40px;
+    color: transparent;
+    -webkit-text-stroke: .5px #fff;
+    background-image: linear-gradient(#00abf0, #00abf0);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -410px 0;
+    animation: animateText 6s linear infinite;
+}
+
+@keyframes animateText {
+    0%, 95%, 100% {
+        background-position: -410px 0;
+    }
+    65%, 85% {
+        background-position: 0 0;
+    }
+}
+
+.home-content {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.home-sci {
+    margin: 25px 0 40px;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    margin-left: 12px;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    background: #00abf0;
+    color: #fff;
+    border-color: #00abf0;
+    box-shadow: 0 0 10px #00abf0;
+}
+
+.btn {
+    padding: 12px 35px;
+    background: #00abf0;
+    border-radius: 40px;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #00abf0;
+    transition: .5s;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+/* About Me Section Styles */
+.about-container {
+    height: 100vh;
+    background: linear-gradient(-90deg, #031540 65%, #fff 35%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Remove circular styling for the about me page */
+    width: auto;
+    height: auto;
+}
+
+.about-image img {
+    /* Remove circular styling for the about me page */
+    border-radius: 0;
+    width: 80%;
+    height: 80%;
+}
+
+.about-content {
+    max-width: 600px;
+    color: #fff;
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 40px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.about-content h3 {
+    font-size: 28px;
+}
+
+body {
+    margin: 0;
+}
+
+.achievements-container {
+    background: linear-gradient(-90deg, #031540 75%, #fff 25%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 20px; /* Gap between columns */
+    padding: 0 10%;
+    overflow: hidden; /* Prevent vertical scroll */
+}
+
+.item {
+    display: flex;
+}
+
+.image-container,
+.text-container {
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(100% + 10px); /* Set a fixed width for the image containers with an additional 10px */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    padding: 20px;
+}
+
+h3, p {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+h3 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+/* Add these styles at the end of your existing style.css file or modify accordingly */
+
+/* Contact Section Styles */
+.contact-container {
+    background: linear-gradient(-90deg, #031540 65%, #fff 35%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden; /* Prevent vertical scroll */
+    min-height: 100vh;
+}
+
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #031540;
+}
+
+.contact-form label {
+    font-size: 18px;
+    color: #031540;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #031540;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 12px 35px;
+    background: #00abf0;
+    border-radius: 40px;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #00abf0;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    box-shadow: none;
+}
+
+/* Footer Styles */
+.footer {
+    background: #031540;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
